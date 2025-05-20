@@ -524,7 +524,7 @@
          <!-- mesaage box -->
         <script>
   document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Stop the default submission behavior
 
     const form = e.target;
     const formData = new FormData(form);
@@ -548,15 +548,13 @@
           popup.style.display = "none";
         }, 3000);
       } else {
-        alert("Something went wrong. Please try again.");
+        alert("Form submission failed. Please try again.");
       }
     }).catch(error => {
       alert("Error submitting form. Please check your internet connection.");
     });
   });
 </script>
-
-
 
 </body>
 </html>
