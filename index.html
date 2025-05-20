@@ -382,9 +382,12 @@
                        </div>
                     </form>
                     <!-- Message Box (hidden by default) -->
-<div id="success-message">
-  ✅ Thank you! Your message has been sent.
+<div id="popup-message">
+  <div class="popup-content">
+    ✅ Thank you! Your message has been sent.
+  </div>
 </div>
+
                   </div>
                 </div>
               </div>
@@ -519,8 +522,8 @@
         navItems.forEach(item => observer.observe(item));
         </script>
          <!-- mesaage box -->
-         <script>
-  document.getElementById("contactform").addEventListener("submit", function (e) {
+        <script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const form = e.target;
@@ -534,16 +537,25 @@
       }
     }).then(response => {
       if (response.ok) {
-        document.getElementById("success-message").style.display = "block";
         form.reset();
+
+        // Show popup
+        const popup = document.getElementById("popup-message");
+        popup.style.display = "flex";
+
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
       } else {
-        alert("Oops! Something went wrong.");
+        alert("Something went wrong. Please try again.");
       }
     }).catch(error => {
-      alert("Something went wrong. Please try again.");
+      alert("Error submitting form. Please check your internet connection.");
     });
   });
 </script>
+
 
 
 </body>
