@@ -19,6 +19,7 @@
         <header class="sticky">
             <div class="side-head">
                 <h1>Javeria</h1>
+                <div class="menu-icon" id="menu-icon">&#9776;</div>
             </div>
             <nav class="navbar">
                 <ul class="nav-items">
@@ -51,7 +52,7 @@
     <!-- Portfolio -->
      <section id="portfolio">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
                 <div class="port-para">
                     <h3>About Me</h3>
@@ -84,7 +85,7 @@
 
                 </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4 mt-md-0 ps-md-5">
                     <div class="img-card">
                         <img src="assets/img/portt.jpg">
                         <div class="icons">
@@ -338,7 +339,7 @@
           </div>
         </section>
         <!-- contact -->
-         <section id="contact-me">
+        <section id="contact-me">
   <div class="contact-section-heading">
     <h2>CONTACT ME</h2>
   </div>
@@ -539,6 +540,15 @@
     }).catch(error => {
       alert("Error submitting form. Please check your internet connection.");
     });
+  });
+</script>
+<!-- nav-items -->
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navItemsElement = document.getElementById('nav-items');
+
+  menuIcon.addEventListener('click', () => {
+    navItemsElement.classList.toggle('active');
   });
 </script>
 </body>
