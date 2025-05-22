@@ -1,7 +1,9 @@
- body{
+ body,html{
 	font-family: 'Poppins', sans-serif;
 	overflow-x:hidden;
-}
+  margin: 0;
+  padding: 0;
+ }
  
  
  .nav-items li{
@@ -12,9 +14,15 @@
     color: lightslategray;
     font-weight: 400;
 }
+.menu-icon {
+  margin-left: auto; 
+  font-size: 28px;
+  cursor: pointer;
+  display: none; 
+}
 .sticky{
     display: flex;
-    position:fixed;
+position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -64,6 +72,13 @@
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
 }
+.side-head {
+  display: flex;
+  align-items: center;         
+  justify-content: space-between; 
+  width: 100%;
+}
+
 .side-head h1{
     margin-left: 60px;
     text-transform: uppercase;
@@ -503,12 +518,8 @@ background: rgb(249, 251, 253);
 .social-icons a:hover {
   color: #ff6b6b;
 }
-#success-message{
-  display:none; 
-  color: green;
-   margin-top: 10px;
-}
-#popup-message {
+
+ #popup-message {
     display: none;
     position: fixed;
     top: 0; left: 0;
@@ -528,7 +539,110 @@ background: rgb(249, 251, 253);
     box-shadow: 0 0 20px #000;
     text-align: center;
   }
+@media(max-width:1074px){
+.img-card {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto; 
+    float: none;    
+  }
+
+  .img-card img {
+    width: 100%;     
+    height: auto;    
+    display: block;
+    margin-top: 20px;
+  }
+  
+}
+@media (max-width:1087px) {
+  .sticky {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+ .sticky {
+    position: static;
+  }
+
+  .nav-items {
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px; 
+  }
+
+  .nav-items li {
+    width: 100%;
+  }
+
+  .nav-items li a {
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@media(max-width: 987px) {
+  .img-card {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto; 
+    float: none;    
+  }
+
+  .img-card img {
+    width: 100%;     
+    height: auto;    
+    display: block;
+    margin-top: 20px;
+  }
+  .contact-btn button{
+       padding: 8px 140px;      
+       font-size: 18px;   
+      }
+      .side-head h1{
+        padding-right: 20px;
+      }
+      .nav-items {
+       align-items: flex-start;      
+    gap: 10px;                   
+  }
+  .nav-items li {
+    width: 100%;
+  }
+}
 
 
 
-     
+@media (max-width: 1072px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 15px 25px;
+  }
+
+  .nav-items.active {
+    display: flex;
+  }
+
+  .nav-items li {
+    padding: 10px 0;
+  }
+
+  .nav-items li a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+}
