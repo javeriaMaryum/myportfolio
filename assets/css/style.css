@@ -4,16 +4,6 @@
   margin: 0;
   padding: 0;
  }
- .nav-items {
-  display: none;
-  flex-direction: column;
-}
-
-.nav-items.active {
-  display: flex;
-}
-
- 
  .nav-items li{
     list-style:none;
 }
