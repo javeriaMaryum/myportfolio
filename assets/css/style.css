@@ -193,11 +193,11 @@ position:fixed;
  .para span{
     color:#BA55D3;
  }
- .para button{
+ .para a{
     padding:10px;
     font-size: 20px;
     width:250px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
  }
  
  #profile{
