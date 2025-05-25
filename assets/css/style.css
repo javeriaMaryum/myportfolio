@@ -654,4 +654,12 @@ background: rgb(249, 251, 253);
 	.contact-address{
 		padding-top:40px;
 	}
+	@media(max-width:524px){
+		.para h2{
+			font-size:50px;
+		}
+		.para p{
+			font-size:15px;
+		}
+	}
 }
