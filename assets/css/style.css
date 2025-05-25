@@ -646,3 +646,8 @@ background: rgb(249, 251, 253);
     display: block;
   }
 }
+@media(max-width:692px){
+	.contact-address{
+		margin-top:10px;
+	}
+}
